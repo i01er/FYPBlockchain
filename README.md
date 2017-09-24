@@ -15,7 +15,7 @@ Users need to use their private key and a public key for posting/commenting any 
 
 The comment/post would be post to the Blockchain system(e.g. Bitcoin, Ether).
 
-For example, the comment has be hashed and contained into the OP_Return, geth function. It could be successfully saved to the system (forever)
+For example, the comment has be hashed and contained into the OP_Return, geth function. It could be successfully saved to the system (forever).
 
 ### View/Check Comments
 The application would go through the whole blockchain and verify the information.

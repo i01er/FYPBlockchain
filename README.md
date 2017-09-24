@@ -5,10 +5,10 @@ Users would use his/her own private key with a public key to verify their identi
 
 [Prof of Concept](https://www.reddit.com/r/ethereum/comments/3hx73f/freakiest_thing_ever_the_blockchain_now_has_a/)
 
-In this example, users could even upload a song into the blockchain system. It could be seen that blockchain has the ability to contain every votes or every comments in the system.
+In this example, users could even upload a song into the blockchain system. It could see that blockchain has the ability to contain every votes or every comments in the system.
 
 ### Registration
-When users finish the registration, they will receive a private key.
+When users finish the registration, they will receive a private key. The application could use the key to verify which one is the vaild user.
 
 ### Posting/Commenting
 Users need to use their private key and a public key for posting/commenting any information. This action can verify the users' identity and still provide an anonymous commenting system. 

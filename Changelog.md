@@ -1,4 +1,7 @@
-# Blockchain Commenting/Voting Application
+# Changelog
 
-## How it work
-Users would use his/her own private key with a public key to verify their identity before posting/commenting. This could keep all information in the blockchain valid. In addition, all the comments cannot be deleted or filtered by 3rd party. Everyone can help to confirm the validity of the contents.
+### 25Sep2017
+- Created this project
+- Created README to discrapte the blockchain application
+- Created Chagelog to saved all the changes
+- Created Schedule

@@ -10,20 +10,20 @@ In this example, users could even upload a song into the blockchain system. It c
 ### Registration
 When users finish the registration, they will receive a private key. The application could use the key to verify which one is the vaild user.
 
-All the checking will be done during the registration stage, for providing an anonymous system.
+Identities will not be checked after the registration stage, in order to provide an anonymous system.
 
 ### Posting/Commenting
 Users need to use their private key and a public key for posting/commenting/voting any information. This action can verify the users' identity and still provide an anonymous commenting system. 
 
 ![](https://github.com/i01er/FYPBlockchain/blob/master/Images/Voting.png)
-When the voting started, the application will make a remark. After finish the voting, it will make another remark to keep all the vaild votes between two remarks. All the votes before or after the remark are invaild.
+When the voting starts, the application will make a remark. After the voting is finished, it will make another remark to keep all the vaild votes between two remarks. Any votes before or after the remarks are invaild.
 
 The comment/post/vote would be post to the Blockchain system(e.g. Bitcoin, Ether).
 
 For example, the comment has to be hashed and contained into the OP_Return/geth function. It could be successfully saved to the system (forever).
 
 ### View/Check Comments
-The application would go through the whole blockchain and verify the information.
+The application would go through the whole blockchain and verify the information. O
 
 ### Edit
 Users or 3rd party could not edit any information after it posted to the blockchain.

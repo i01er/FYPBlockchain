@@ -23,7 +23,7 @@ The comment/post/vote would be post to the Blockchain system(e.g. Bitcoin, Ether
 For example, the comment has to be hashed and contained into the OP_Return/geth function. It could be successfully saved to the system (forever).
 
 ### View/Check Comments
-The application would go through the whole blockchain and verify the information. O
+The application would go through the whole blockchain and verify the information. Omit all the invaild votes/comments and prevent any potential attack.
 
 ### Edit
 Users or 3rd party could not edit any information after it posted to the blockchain.

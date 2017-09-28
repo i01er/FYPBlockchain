@@ -1,11 +1,26 @@
 # Blockchain Commenting/Voting Application
 
+<<<<<<< Updated upstream
 ## How it works
 Users would use his/her own private key with a public key to verify their identity before posting/commenting/voting. This could keep all information in the blockchain valid. In addition, all the comments cannot be deleted or filtered by 3rd party. Everyone can help to confirm the validity of the contents.
+=======
+### How it works
+Users would use his/her own private key with a public key to verify their identity before posting/commenting. This could keep all information in the blockchain valid. In addition, all the comments cannot be deleted or filtered by 3rd party. Everyone can help to confirm the validity of the contents.
+>>>>>>> Stashed changes
 
 [Example](https://www.reddit.com/r/ethereum/comments/3hx73f/freakiest_thing_ever_the_blockchain_now_has_a/)
 
 In this example, users could even upload a song into the blockchain system. It could see that blockchain has the ability to contain every votes or every comments in the system.
+
+### Requirements
+- An existing blockchain system for storing information.
+- 
+
+### Assumptions
+- Every user only can vote once
+- Every user only got one identity
+- Every identity is unique
+- 
 
 ### Registration
 When users finish the registration, they will receive a private key. The application could use the key to verify which one is the vaild user.

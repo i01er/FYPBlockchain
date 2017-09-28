@@ -1,6 +1,5 @@
 # Blockchain Commenting/Voting Application
 
-<<<<<<< Updated upstream
 ## How it works
 Users would use his/her own private key with a public key to verify their identity before posting/commenting/voting. This could keep all information in the blockchain valid. In addition, all the comments cannot be deleted or filtered by 3rd party. Everyone can help to confirm the validity of the contents.
 

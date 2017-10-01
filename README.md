@@ -9,13 +9,12 @@ In this example, users could even upload a song into the blockchain system. It c
 
 ### Requirements
 - An existing blockchain system for storing information.
-- 
-
-### Assumptions
 - Every user only can vote once
 - Every user only got one identity
 - Every identity is unique
-- 
+
+### Assumptions
+Every user will only 
 
 ### Registration
 When users finish the registration, they will receive a private key. The application could use the key to verify which one is the vaild user.

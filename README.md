@@ -5,7 +5,7 @@ Users would use his/her own private key with a public key to verify their identi
 
 [Example](https://www.reddit.com/r/ethereum/comments/3hx73f/freakiest_thing_ever_the_blockchain_now_has_a/)
 
-In this example, users could even upload a song into the blockchain system. It could see that blockchain has the ability to contain every votes or every comments in the system.
+In this example, users could even upload a song into the blockchain system. It could be seen that blockchain has the ability to contain every votes or every comments in the system.
 
 ### Requirements
 - An existing blockchain system for storing information.
@@ -14,12 +14,12 @@ In this example, users could even upload a song into the blockchain system. It c
 - Every identity is unique
 
 ### Assumptions
-Every user will only 
+Every user will only register one identity, vote once. There will be no replicated votes and identies. 
 
 ### Registration
 When users finish the registration, they will receive a private key. The application could use the key to verify which one is the vaild user.
 
-Identities will not be checked after the registration stage, in order to provide an anonymous system.
+Identities will not be checked after the registration stage, in order to provide an anyonomus system.
 
 ### Posting/Commenting
 Users need to use their private key and a public key for posting/commenting/voting any information. This action can verify the users' identity and still provide an anonymous commenting system. 
@@ -36,4 +36,7 @@ The application would go through the whole blockchain and verify the information
 
 ### Edit
 Users or 3rd party could not edit any information after it posted to the blockchain.
+
+### Expected Outcome
+The application would be using for online digital voting in an anyonomus environment.
 

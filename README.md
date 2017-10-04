@@ -40,3 +40,5 @@ Users or 3rd party could not edit any information after it posted to the blockch
 ### Expected Outcome
 The application would be using for online digital voting in an anyonomus environment.
 
+![](https://github.com/i01er/FYPBlockchain/blob/master/Images/Flow.png)
+The operatation flow of the application.

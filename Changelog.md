@@ -6,7 +6,11 @@
 - Created Chagelog to saved all the changes
 - Created Schedule
 
-### 3Oct2017
+### 27Sep2017
+- Read throught the Cryptographic Counters and Applications to Electronic Voting (by Jonathan Katz, Steven Myers and Rafail Ostrovsky).
+
+
+### 03Oct2017
 - Added Requirements in README
 - Added Assumptions in README
 - Added Expected Outcome in README

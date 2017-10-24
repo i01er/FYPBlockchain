@@ -15,3 +15,10 @@
 - Added Assumptions in README
 - Added Expected Outcome in README
 - Updated README
+
+### 09-15Oct2017
+- Proposal v1
+
+### 16-27Oct2017
+- Compare different method
+- Create Blockchain system

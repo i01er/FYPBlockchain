@@ -1,6 +1,7 @@
 #Logbook
 
 ##Logbook for FYP First Semester
+
 ###Sep 8-15, 2017
 Organised the first meeting with Prof. Lau. I had presented my idea about how to apply blockchain into cloud storage system. In this week I focused on finding example and research of blockchain cloud storages.
 

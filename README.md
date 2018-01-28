@@ -37,9 +37,6 @@ In this week, I was writing the report and finish the result, discussion and the
 
 ### Nov 27-Dec 01, 2017
 Finalise the Final Report, added the reference and completed different sections.
-<<<<<<< Updated upstream
-=======
-
 
 
 
@@ -55,4 +52,3 @@ This week I was configuring the React Native for building a moblie app for the b
 This week I was doing some research on the private Ethereum blockchain and the smart contract, namely the go-ethereum and the Truffle would be good for building a private blockcahin service.
 
 ### Jan 29-Feb 02, 2018
->>>>>>> Stashed changes

@@ -37,3 +37,22 @@ In this week, I was writing the report and finish the result, discussion and the
 
 ### Nov 27-Dec 01, 2017
 Finalise the Final Report, added the reference and completed different sections.
+<<<<<<< Updated upstream
+=======
+
+
+
+
+## Logbook for FYP Second Semester
+
+### Jan 08-12, 2018
+This week I was start writing the draft report, writing the introduction and applicaion flow. The application flow will be implemented.
+
+### Jan 15-19, 2018
+This week I was configuring the React Native for building a moblie app for the blockchain voting system. Start to build the frontend, which is the voting part of the system.
+
+### Jan 15-19, 2018
+This week I was doing some research on the private Ethereum blockchain and the smart contract, namely the go-ethereum and the Truffle would be good for building a private blockcahin service.
+
+### Jan 29-Feb 02, 2018
+>>>>>>> Stashed changes

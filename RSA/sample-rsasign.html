@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Sample Application for RSA signing in JavaScript</title>
+<script language="JavaScript" type="text/javascript" src="./jsrsasign-all-min.js"></script>
+<script language="JavaScript" type="text/javascript">
+function doSign() {
+  var rsa = new RSAKey();
+  rsa.readPrivateKeyFromPEMString(document.form1.prvkey1.value);
+  var hashAlg = document.form1.hashalg.value;
+  var hSig = rsa.sign(document.form1.msgsigned.value, hashAlg);
+  document.form1.siggenerated.value = linebrk(hSig, 64);
+}
+
+function doVerify() {
+  var PreSig = hSig;
+  var sMsg = document.form1.msgverified.value;
+  var hSig = document.form1.sigverified.value;
+
+  var pubKey = KEYUTIL.getKey(document.form1.cert.value);
+  var isValid = pubKey.verify(sMsg, hSig);
+
+  // display verification result
+  if (isValid) {
+    _displayStatus("valid");
+  } else {
+    _displayStatus("invalid");
+  }
+}
+
+function copyMsgAndSig() {
+  _displayStatus("reset");
+  document.form1.msgverified.value = document.form1.msgsigned.value; 
+  document.form1.sigverified.value = document.form1.siggenerated.value; 
+}
+
+function hashCode(chr) {
+  var hashhash = 0, i, chr;
+  if (this.length === 0) return hashhash;
+  for (i = 0; i < this.length; i++) {
+    chr   = this.charCodeAt(i);
+    hashhash  = ((hashhash << 5) - hashhash) + chr;
+    hashhash |= 0; // Convert to 32bit integer
+  }
+  return hashhash;
+}
+
+function _displayStatus(sStatus) {
+  var pretext = "023cd11e108ada7ad27b8600cf02e4f797a1041caa6325b5dfe52cbac4add316023582685a5c196df4f58f7296dead0d36f45df1a72131180e2da9a22274f13440c0836ec4c3ad1931ac265a86d4a9e82ddebd7a9cdb6afc4bd3c1ad8de3c12e67bdbee9dcf8315c6c26f663a943ddf887c5c926e48595dbc68dca753387e110";
+  var div1 = document.getElementById("verifyresult");
+  var text = document.form1.siggenerated.value;
+  var postext = hashCode(text);
+  if (sStatus == "valid") {
+    div1.style.backgroundColor = "skyblue";
+    div1.innerHTML = "Hash1:    " + text + "\r\n";
+    div1.innerHTML += "Hash2:    ";
+    div1.innerHTML += pretext "\r\n";
+    div1.innerHTML += postext;
+  } else if (sStatus == "invalid") {
+    div1.style.backgroundColor = "deeppink";
+    div1.innerHTML = "This signature is *NOT VALID*.";
+  } else {
+    div1.style.backgroundColor = "yellow";
+    div1.innerHTML = "Please fill values below and push [Verify this sigunature] button.";
+  }
+}
+
+</script>
+<style type="text/css">
+TD  {vertical-align: top}
+</style>
+</head>
+<body>
+<h1>Sample Application for RSA signing in JavaScript</h1>
+
+<form name="form1">
+<table border="0">
+<tr><th>Signer</th><th></th><th>Verifier</th></tr>
+
+<tr>
+<td>
+PEM RSA Private Key<br/>
+<!-- _test/z5.* for X.509v1 certificate and private key -->
+<textarea name="prvkey1" rows="10" cols="65">
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDRhGF7X4A0ZVlEg594WmODVVUIiiPQs04aLmvfg8SborHss5gQ
+Xu0aIdUT6nb5rTh5hD2yfpF2WIW6M8z0WxRhwicgXwi80H1aLPf6lEPPLvN29EhQ
+NjBpkFkAJUbS8uuhJEeKw0cE49g80eBBF4BCqSL6PFQbP9/rByxdxEoAIQIDAQAB
+AoGAA9/q3Zk6ib2GFRpKDLO/O2KMnAfR+b4XJ6zMGeoZ7Lbpi3MW0Nawk9ckVaX0
+ZVGqxbSIX5Cvp/yjHHpww+QbUFrw/gCjLiiYjM9E8C3uAF5AKJ0r4GBPl4u8K4bp
+bXeSxSB60/wPQFiQAJVcA5xhZVzqNuF3EjuKdHsw+dk+dPECQQDubX/lVGFgD/xY
+uchz56Yc7VHX+58BUkNSewSzwJRbcueqknXRWwj97SXqpnYfKqZq78dnEF10SWsr
+/NMKi+7XAkEA4PVqDv/OZAbWr4syXZNv/Mpl4r5suzYMMUD9U8B2JIRnrhmGZPzL
+x23N9J4hEJ+Xh8tSKVc80jOkrvGlSv+BxwJAaTOtjA3YTV+gU7Hdza53sCnSw/8F
+YLrgc6NOJtYhX9xqdevbyn1lkU0zPr8mPYg/F84m6MXixm2iuSz8HZoyzwJARi2p
+aYZ5/5B2lwroqnKdZBJMGKFpUDn7Mb5hiSgocxnvMkv6NjT66Xsi3iYakJII9q8C
+Ma1qZvT/cigmdbAh7wJAQNXyoizuGEltiSaBXx4H29EdXNYWDJ9SS5f070BRbAIl
+dqRh3rcNvpY6BKJqFapda1DjdcncZECMizT/GMrc1w==
+-----END RSA PRIVATE KEY-----
+</textarea><br/>
+Text message to be signed.<br/>
+<input type="text" name="msgsigned" size="100" value="aaa"/><br/>
+</td>
+<td></td>
+<td>
+Verification Result
+<div id="verifyresult" style="background: yellow">Please fill values below and push "Verify this sigunature" button.</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<select name="hashalg">
+<option value="sha1" selected>SHA1
+<option value="sha256">SHA256
+<option value="sha512">SHA512
+<option value="md5">MD5
+<option value="ripemd160">RIPEMD-160
+</select>
+<input type="button" value="Sign to this message &darr;" onClick="doSign();"/><br/>
+</td>
+<td>
+<input type="button" value="Copy &rarr;" onClick="copyMsgAndSig();"/><br/>
+</td>
+<td>
+<input type="button" value="Verify this signature &uarr;" onClick="doVerify();"/><br/>
+</td>
+</tr>
+
+<tr>
+<td>
+Generated Signature<br/>
+<textarea name="siggenerated" rows="4" cols="65"></textarea>
+</td>
+<td>
+</td>
+<td>
+Verifying Signature<br/>
+<textarea name="sigverified" rows="4" cols="65">
+6f7df91d8f973a0619d525c319337741130b77b21f9667dc7d1d74853b644cbe
+5e6b0e84aacc2faee883d43affb811fc653b67c38203d4f206d1b838c4714b6b
+2cf17cd621303c21bac96090df3883e58784a0576e501c10cdefb12b6bf887e5
+48f6b07b09ae80d8416151d7dab7066d645e2eee57ac5f7af2a70ee0724c8e47
+</textarea><br/>
+Text message to be verified.<br/>
+<input type="text" name="msgverified" size="100" value="aaa"/><br/>
+Signer's Public Key Certificate.<br/>
+<textarea name="cert" rows="10" cols="65">
+-----BEGIN CERTIFICATE-----
+MIIBvTCCASYCCQD55fNzc0WF7TANBgkqhkiG9w0BAQUFADAjMQswCQYDVQQGEwJK
+UDEUMBIGA1UEChMLMDAtVEVTVC1SU0EwHhcNMTAwNTI4MDIwODUxWhcNMjAwNTI1
+MDIwODUxWjAjMQswCQYDVQQGEwJKUDEUMBIGA1UEChMLMDAtVEVTVC1SU0EwgZ8w
+DQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANGEYXtfgDRlWUSDn3haY4NVVQiKI9Cz
+Thoua9+DxJuiseyzmBBe7Roh1RPqdvmtOHmEPbJ+kXZYhbozzPRbFGHCJyBfCLzQ
+fVos9/qUQ88u83b0SFA2MGmQWQAlRtLy66EkR4rDRwTj2DzR4EEXgEKpIvo8VBs/
+3+sHLF3ESgAhAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAEZ6mXFFq3AzfaqWHmCy1
+ARjlauYAa8ZmUFnLm0emg9dkVBJ63aEqARhtok6bDQDzSJxiLpCEF6G4b/Nv/M/M
+LyhP+OoOTmETMegAVQMq71choVJyOFE5BtQa6M/lCHEOya5QUfoRF2HF9EjRF44K
+3OK+u3ivTSj3zwjtpudY5Xo=
+-----END CERTIFICATE-----
+</textarea><br/>
+</td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

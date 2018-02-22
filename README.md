@@ -52,3 +52,13 @@ This week I was configuring the React Native for building a moblie app for the b
 This week I was doing some research on the private Ethereum blockchain and the smart contract, namely the go-ethereum and the Truffle would be good for building a private blockcahin service.
 
 ### Jan 29-Feb 02, 2018
+This week I was doing research on the go-Ethereum and dapp, for building the dapp the project could use the Truffle. I was writing the introduction of the Truffle and Ethereum.
+
+### Feb 05-09, 2018
+This week I was studying the example of Truffle, trying to use the Truffle to build a dapp.
+
+### Feb 12-16, 2018
+Chinese New Year
+
+### Feb 19-23, 2018
+This week I was focusing on building the Truffle application. Also try to figure out the possibility of running the Truffle application on the Azure cloud.

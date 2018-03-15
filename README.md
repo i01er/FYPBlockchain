@@ -64,5 +64,10 @@ Chinese New Year
 This week I was focusing on building the Truffle application. Also try to figure out the possibility of running the Truffle application on the Azure cloud.
 
 ### Feb 26-Mar 02, 2018
+I was developing the application with Truffle and Ganache, it could use the web for voting. It is using javascript and relaying on the Ethereum network. However, it is using the private network instand of the Ethereum testnet.
 
 ### Mar 05-09, 2018
+I was still working on the application part, it created a web GUI interface for interacting the service and the blockchain. The application contained a index.html and index.js.
+
+### Mar 12-16, 2018
+I was working on the applcation, creating different questions for the demo of a course evluation. I was also studying on the method of deploying the application to the Azure and the [Guidelines on Course and Teaching Evaluation](https://www.cuhk.edu.hk/clear/qm/A7-3.pdf) of CUHK.

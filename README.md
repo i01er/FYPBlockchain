@@ -3,17 +3,17 @@
 ## Logbook for FYP First Semester
 
 ###### Sep 8-15, 2017
-Organised the first meeting with Prof. Lau. I had presented my idea about how to apply blockchain into cloud storage system. In this week I focused on finding example and research of blockchain cloud storages.
-\
+Organised the first meeting with Prof. Lau. I had presented my idea about how to apply blockchain into cloud storage system. In this week I focused on finding example and research of blockchain cloud storages.  
+  
 ###### Sep 18-22, 2017
-In this week, I reviewed the possibility of using blockchain in voting and commenting system, adjusted the topic and work on the research about blockchain and blockchain applications on reality. I had tried to find out some daily problem could use blockchain as a solution.
-\
+In this week, I reviewed the possibility of using blockchain in voting and commenting system, adjusted the topic and work on the research about blockchain and blockchain applications on reality. I had tried to find out some daily problem could use blockchain as a solution.  
+  
 ###### Sep 25-29, 2017
-In this week, I created a project on GitHub to save all the progress of the project. In addition to start working on writing the introduction of the blockchain application. I had also created the logbook, read the paper “Cryptographic Counters and Applications to Electronic Voting” (by Jonathan Katz, Steven Myers and Rafail Ostrovsky), try get more information about the electronic voting system in reality. I had contacted Prof. Lau through email and discussed about the architecture of the system.
-\
+In this week, I created a project on GitHub to save all the progress of the project. In addition to start working on writing the introduction of the blockchain application. I had also created the logbook, read the paper “Cryptographic Counters and Applications to Electronic Voting” (by Jonathan Katz, Steven Myers and Rafail Ostrovsky), try get more information about the electronic voting system in reality. I had contacted Prof. Lau through email and discussed about the architecture of the system.  
+  
 ###### Oct 02-06, 2017
-In this week I mainly focused on writing the description of the application, added different part namely the requirements, assumptions and expected outcome in the description on GitHub. In addition I kept working on research about different method of information exchange over the untrusted network.
-\
+In this week I mainly focused on writing the description of the application, added different part namely the requirements, assumptions and expected outcome in the description on GitHub. In addition I kept working on research about different method of information exchange over the untrusted network.  
+  
 ###### Oct 09-13, 2017
 In this week I focused on writing the proposal, identify the problem of existing voting system. In addition, I started to think about the methodology of blockchain voting system. I had also contacted Prof. Lau through email and reported the progress of my work. Prof. Lau gave some suggestion and I attempted to modify my work.
 \

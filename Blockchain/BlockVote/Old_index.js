@@ -3,7 +3,7 @@ abi = JSON.parse('[{"constant":false,"inputs":[{"name":"candidate","type":"bytes
 VotingContract = web3.eth.contract(abi);
 // In your nodejs console, execute contractInstance.address to get the address at which the contract is deployed and change the line below to use your deployed address
 contractInstance = VotingContract.at('0xcc6c6e77aad6f31a297fe1bf26ef107b0332cb16');
-candidates = {"1": "candidate-1", "2": "candidate-2", "3": "candidate-3"}
+candidates = {"Rama": "candidate-1", "Nick": "candidate-2", "Jose": "candidate-3"}
 
 function voteForCandidate() {
   candidateName = $("#candidate").val();

@@ -4,6 +4,7 @@ VotingContract = web3.eth.contract(abi);
 // In your nodejs console, execute contractInstance.address to get the address at which the contract is deployed and change the line below to use your deployed address
 contractInstance = VotingContract.at('0xcc6c6e77aad6f31a297fe1bf26ef107b0332cb16');
 candidates = {"1": "candidate-1", "2": "candidate-2", "3": "candidate-3"}
+choices = {"1": "choice-1", "2": "choice-2", "3": "choice-3"}
 
 function voteForCandidate() {
   candidateName = $("#candidate").val();
@@ -11,6 +12,10 @@ function voteForCandidate() {
     let div_id = candidates[candidateName];
     $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
   });
+}
+
+function c4e() {
+  
 }
 
 $(document).ready(function() {

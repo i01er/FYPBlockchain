@@ -1,18 +1,12 @@
-//IERG4999HJ - Final Year Project
-//Name: WAN Kam Leung
-//SID: 1155068082
-
-pragma solidity ^0.4.18; 
-//Specify the version of the compiler
+pragma solidity ^0.4.18; //We have to specify what version of the compiler this code will use
 
 contract Voting {
 
-  //struct datatype to store the voter information.
+  // We use the struct datatype to store the voter information.
   struct voter {
     address voterAddress; // The address of the voter
     uint tokensBought;    // The total no. of tokens this voter owns
     uint[] tokensUsedPerCandidate; // Array to keep track of votes per candidate.
-    
     /* We have an array of candidates initialized below.
      Every time this voter votes with her tokens, the value at that
      index is incremented. Example, if candidateList array declared

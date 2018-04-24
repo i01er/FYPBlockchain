@@ -73,6 +73,7 @@ contract Election
         require(!voters[msg.sender].voted);
         
         voters[msg.sender].voted = true;
+        
         voters[msg.sender].voteIndex1 = voteIndex1;
         voters[msg.sender].voteIndex2 = voteIndex2;
         voters[msg.sender].voteIndex3 = voteIndex3;

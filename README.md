@@ -71,8 +71,28 @@ I was still working on the application part, it created a web GUI interface for 
   
 ###### Mar 12-16, 2018
 I was working on the applcation, creating different questions for the demo of a course evluation. I was also studying on the method of deploying the application to the Azure and the [Guidelines on Course and Teaching Evaluation](https://www.cuhk.edu.hk/clear/qm/A7-3.pdf) of CUHK.
-  
-  
+
+###### Mar 19-23, 2018
+I was working on the coding part, keep on building the application. Try to create a sample course evaluation. I was studying how the Truffle working on Azure.
+
+###### Mar 26-30, 2018
+I was started to write the report and review the previous documents. I was also keep on coding. I was working on the javascript and html code.
+
+###### Apr 02-06, 2018
+I was working on the project report and keep on creating the content on the application. I was editing the voting.sol for understanding the smart contract of Ethereum.
+
+###### Apr 09-13, 2018
+I was writing the vote.sol of the project, adding more questions. In addition I was working on the index.html for providing interface let user easier to use.
+
+###### Apr 16-20, 2018
+I was start writing the report of descripting the project. Additionally adding more functions on the vote.sol for better performance.
+
+###### Apr 23-27, 2018
+
+###### Apr 30-May 04, 2018
+The final week
+
+
 #### Planning: Azure
 The Azure could use to depoly the applcaiton to the "real" existing ethereum test network. However in this stage we will forcusing on finishing the applcaiton frist, after that it will consider to use the Azure for making the application apply to the "real world" and face the public.
 

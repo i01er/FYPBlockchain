@@ -28,7 +28,7 @@ contract Election
     
     event QuestionResult(string choice, uint voteCount);
     
-    function QuestionForm(string _choice, uint durationMinutes, string choice1, string choice2)
+    function Election(string _choice, uint durationMinutes, string choice1, string choice2)
     {
         owner = msg.sender;
         choice = _choice;

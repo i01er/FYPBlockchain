@@ -14,10 +14,6 @@ function voteForCandidate() {
   });
 }
 
-function c4e() {
-  
-}
-
 $(document).ready(function() {
   candidateNames = Object.keys(candidates);
   for (var i = 0; i < candidateNames.length; i++) {

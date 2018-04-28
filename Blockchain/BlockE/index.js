@@ -6,7 +6,7 @@ WAN Kam Leung
 var Web3 = require(‘web3’);
 var web3 = new Web3();
 web3.setProvider(new web3.providers.HttpProvider("http://localhost:8545"));
-var abi = JSON.parse([
+var abi = [
   {
     "constant": false,
     "inputs": [
@@ -286,11 +286,12 @@ var abi = JSON.parse([
     "stateMutability": "view",
     "type": "function"
   }
-])
-VotingContract = web3.eth.contract(abi);
+];
+
+var Election = web3.eth.contract(abi);
+//VotingContract = web3.eth.contract(abi);
 contractInstance = VotingContract.at('');//The address
-candidates = {"1": "candidate-1", "2": "candidate-2", "3": "candidate-3"}
-choices = {"1": "choice-1", "2": "choice-2", "3": "choice-3"}
+answer = {"1": "1 - Very Good", "2": "2 - Okay", "3": "3 - Not Good", "4": "4 - Really Bad"}
 
 function voteForCandidate() {
   candidateName = $("#candidate").val();

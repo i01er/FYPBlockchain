@@ -30,6 +30,7 @@ contract Election
     Question[] public question3;
     uint public auctionEnd;
 
+    //Differnt choices of the questions, just to demonstration the actual evaluation form.
     string public answer1 = "1 - Very Good";
     string public answer2 = "2 - Okay";
     string public answer3 = "3 - Not Good";
@@ -65,6 +66,7 @@ contract Election
         require(!voters[voter].voted);
         
         voters[voter].weight = 1;
+        //Every user would only have one ballot for each question.
     }
     
     function vote(uint voteIndex1, uint voteIndex2, uint voteIndex3)

@@ -291,21 +291,33 @@ var abi = [
 var Election = web3.eth.contract(abi);
 //VotingContract = web3.eth.contract(abi);
 contractInstance = VotingContract.at('');//The address
-answer = {"1": "1 - Very Good", "2": "2 - Okay", "3": "3 - Not Good", "4": "4 - Really Bad"}
+answer = {"1 - Very Good": "1", "2 - Okay": "2", "3 - Not Good": "3", "4 - Really Bad": "4"}
+//If the user choose "1 - Very Good", the blockchain will receive "1"
 
-function voteForCandidate() {
-  candidateName = $("#candidate").val();
-  contractInstance.voteForCandidate(candidateName, {from: web3.eth.accounts[0]}, function() {
-    let div_id = candidates[candidateName];
-    $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
-  });
+var VoterAddress = JSON.parse(voter.address);
+var OwnerAddress = JSON.parse(owner.address);
+
+function submit()
+{
+  voteChoice = $("#answer").val();
+  contractInstance.vote();
 }
 
-$(document).ready(function() {
-  candidateNames = Object.keys(candidates);
-  for (var i = 0; i < candidateNames.length; i++) {
-    let name = candidateNames[i];
-    let val = contractInstance.totalVotesFor.call(name).toString()
-    $("#" + candidates[name]).html(val);
-  }
-});
+// function voteForCandidate() {
+//   candidateName = $("#candidate").val();
+//   contractInstance.voteForCandidate(candidateName, {from: web3.eth.accounts[0]}, function() {
+//     let div_id = candidates[candidateName];
+//     $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
+//   });
+// }
+
+// $(document).ready(function() {
+//   candidateNames = Object.keys(candidates);
+//   for (var i = 0; i < candidateNames.length; i++) {
+//     let name = candidateNames[i];
+//     let val = contractInstance.totalVotesFor.call(name).toString()
+//     $("#" + candidates[name]).html(val);
+//   }
+// });
+
+

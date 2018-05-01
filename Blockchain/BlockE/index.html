@@ -10,16 +10,26 @@ WAN Kam Leung
 </head>
 <body class="container">
 <h2>Course Evaluation</h2>
+
+<!--Showing the user address-->
+<table>
+	<tr>
+		<td><p>Your Address:</p></td>
+		<td><p id="VoterAddress">112233</p></td>
+	</tr>
+</table>
+
+<!--Displaying the questions-->
 <table>
 	<tr>
 		<div id="Q1">
 			<td>Question #1</td>
 			<td id="Q1Ans">
 				<select>
-  					<option value="1" selected>	1 - Very Good</option>
- 					<option value="2">			2 - Okay</option>
-					<option value="3">			3 - Not Good</option>
-  					<option value="4">			4 - Really Bad</option>
+  					<option ng-model="question1" value="1" selected>	1 - Very Good</option>
+ 					<option ng-model="question1" value="2">				2 - Okay</option>
+					<option ng-model="question1" value="3">				3 - Not Good</option>
+  					<option ng-model="question1" value="4">				4 - Really Bad</option>
 				</select>
 			</td>
 		</div>
@@ -51,6 +61,8 @@ WAN Kam Leung
 		</div>
 	</tr>
 </table>
+
+<!--Displaying the detail about the blockchain-->
 <h2>Blockchain Detail</h2>
 <table>
 	<tr>
